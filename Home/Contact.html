@@ -592,7 +592,7 @@
                     <div
                       class="menu-item block-user block-dreaming akasha-dropdown"
                     >
-                      <a class="block-link" href="/Shopping/login">
+                      <a class="block-link" href="../Shopping/login.html">
                         <span class="flaticon-profile"></span>
                       </a>
                     </div>
@@ -893,7 +893,7 @@
           </a>
         </div>
         <div class="footer-device-mobile-item device-home device-wishlist">
-          <a href="/Shopping/WishList">
+          <a href="../Shopping/WishList.html">
             <span class="icon">
               <i class="flaticon-heart" aria-hidden="true"></i>
             </span>
@@ -909,7 +909,7 @@
           </a>
         </div>
         <div class="footer-device-mobile-item device-home device-user">
-          <a href="/Shopping/Login">
+          <a href="../Shopping/Login.html">
             <span class="icon">
               <i class="flaticon-profile" aria-hidden="true"></i>
             </span>
@@ -1018,7 +1018,7 @@
           var productid = $(this).attr("data-pid");
           $.ajax({
             method: "post",
-            url: "/Shopping/AddToCart",
+            url: "../Shopping/AddToCart",
             data: { id: productid, Qty: "1" },
             success: function (data) {
               if (data.Status == "1") {
@@ -1046,7 +1046,7 @@
 
           $.ajax({
             method: "post",
-            url: "/Shopping/DeleteCartItem",
+            url: "../Shopping/DeleteCartItem",
             data: { id: productid, skuid: skuid },
             success: function (data) {
               if (data.Status == "1") {
@@ -1081,7 +1081,7 @@
             var skuid = $(Qty).attr("data-skuid");
             $.ajax({
               method: "post",
-              url: "/Shopping/UpdateCart",
+              url: "../Shopping/UpdateCart",
               data: { id: productid, skuid: skuid, Qty: $val },
               success: function (data) {
                 if (data.Status == "1") {
@@ -1122,7 +1122,7 @@
               var skuid = $(Qty).attr("data-skuid");
               $.ajax({
                 method: "post",
-                url: "/Shopping/UpdateCart",
+                url: "../Shopping/UpdateCart",
                 data: { id: productid, skuid: skuid, Qty: $val },
                 success: function (data) {
                   if (data.Status == "1") {
